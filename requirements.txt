@@ -1,0 +1,6 @@
+# Optional — for PDF generation (tools/md_to_pdf.py)
+markdown>=3.5
+xhtml2pdf>=0.2.13
+
+# Optional — for PDF text extraction (tools/convert_pdfs.py)
+pypdf>=4.0

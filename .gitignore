@@ -1,0 +1,18 @@
+# Personal data — ignored by default to prevent accidental exposure.
+# If you use a private repo and want to version your data, remove these lines.
+data/
+coaching/
+
+# Generated output (regenerable from data)
+output/
+
+# PDF input files
+files/
+
+# Python
+__pycache__/
+*.pyc
+
+# System
+nul
+.DS_Store

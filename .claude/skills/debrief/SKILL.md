@@ -1,0 +1,187 @@
+---
+name: debrief
+description: Debrief a voice simulation — analyze transcript against coached answers, track anti-patterns, log session
+argument-hint: <path-to-cv>
+user-invocable: true
+allowed-tools: Read(*), Glob(*), Grep(*), Write(coaching/**), Edit(coaching/**)
+---
+
+# Debrief — Voice Simulation Post-Session Analysis
+
+Analyze a recruiter screening transcript from a Claude App voice simulation. Compare the candidate's answers against coached answers, identify anti-patterns, rate performance, and log the session to the progress tracker.
+
+## Prerequisites
+
+The user has:
+1. Completed a voice simulation in the Claude App (generated via `/voice-export`)
+2. Pasted or provided the conversation transcript in this Claude Code conversation
+3. Invoked this skill with the CV path to identify the role
+
+## Arguments
+
+- `$ARGUMENTS` (required): Path to the CV file used for the simulation (e.g. `output/20260210-target-role-slug.md`)
+
+The transcript is expected to be in the conversation context — the user pastes it before or after invoking the skill.
+
+## Instructions
+
+### Step 1: Load Context
+
+Load these files in parallel using the CV path to derive filenames:
+
+1. **Cheat sheet** — `*-cheatsheet.md` matching CV filename (full file — this IS the coaching side, coached answers are needed here)
+2. **Coached answers** — `coaching/coached-answers.md` (general coached phrasings)
+3. **Deep review** — `*-DEEP-REVIEW.md` matching CV filename (to know what tough questions were expected)
+4. **Anti-pattern scorecard** — `coaching/progress-recruiter/_summary.md`
+5. **Anti-pattern tracker** — `coaching/anti-pattern-tracker.md` (global pattern status — which are resolved, which to watch for)
+6. **Session template** — `coaching/progress-recruiter/_template.md`
+
+If the transcript is not yet in the conversation, ask the user to paste it.
+
+### Step 2: Parse Transcript
+
+Break the transcript into Q&A pairs:
+- **Recruiter question** — what was asked
+- **Candidate answer** — what the candidate said
+- **Topic** — categorize (pitch, technical, compensation, availability, experience, team fit, logistics, closing)
+
+Note which deep review probing questions were actually asked by the recruiter, and which were skipped.
+
+### Step 3: Analyze Each Answer
+
+For each Q&A pair, assess:
+
+#### A. Answer Quality (1-5)
+- **5** — Strong, close to or better than coached version. Concise, direct, memorable.
+- **4** — Good, minor improvements possible. Got the point across.
+- **3** — Adequate but missed opportunities. Could have been stronger.
+- **2** — Weak. Rambling, defensive, or missed the point.
+- **1** — Harmful. Volunteered a negative, contradicted self, or failed to answer.
+
+#### B. Trust/Credibility Impact
+**Key insight:** Real recruiters don't understand technical details, but they DO notice evasiveness, dodging, and red flags that signal "this person might embarrass me in the client interview."
+
+For each answer, assess trust impact:
+- ✅ **Builds trust:** Direct answer, confident, no hedging
+- ⚠️ **Neutral:** Adequate answer, no red flags
+- ❌ **Damages trust:** Dodged question, vague when pressed for specifics, inconsistent, defensive
+
+**Special attention to:**
+- "Didn't answer the actual question" — even non-technical recruiters notice this
+- Being asked the same question twice because the first answer was too vague
+- Any moment where the recruiter might think "is this person hiding something?"
+
+#### C. Comparison to Coached Answer
+- If a coached answer exists (in cheat sheet or coached-answers.md) for this topic, compare:
+  - What was the coached phrasing?
+  - How close did the candidate get?
+  - What was different — better or worse?
+
+#### D. Anti-Pattern Check
+Scan each answer for known anti-patterns. Load the full pattern list from `coaching/anti-pattern-tracker.md` § "Known Anti-Patterns Reference" — that file is the single source of truth for which patterns exist and their numbering. If the tracker has no patterns yet (new user), use these universal seed patterns:
+- Volunteered a negative unprompted
+- Over-explained technical details
+- Hesitated or waffled on compensation/availability
+- Didn't answer the actual question
+- Essay structure (verdict last)
+
+Also watch for any NEW anti-patterns not yet tracked — add them to the tracker after the debrief.
+
+### Step 4: Generate Debrief Report
+
+Present the analysis to the user in this structure:
+
+```markdown
+## Debrief — [Role Title] (Voice Simulation)
+
+**Date:** [today]
+**Questions asked:** [count]
+**Overall confidence rating:** [1-5, based on answer quality average]
+
+### Recruiter Assessment Framework
+
+Real recruiter screening has two dimensions:
+
+| Dimension | Rating | What It Measures |
+|-----------|--------|------------------|
+| **Checkbox Match** | [1-5] | Did you hit the technical keywords from the job ad? |
+| **Trust/Credibility** | [1-5] | "Will this candidate embarrass me if I send them to the client?" |
+
+**Checkbox match:** [X/5] — [brief summary: e.g., "Hit all primary keywords, minor gap on [specific requirement]"]
+**Trust/credibility:** [X/5] — [brief summary: e.g., "Strong except for dodging a concrete example on [topic]"]
+
+**Likelihood of being forwarded:** [X/5] — Checkbox × Trust = overall outcome
+**Likelihood of strong advocacy:** [X/5] — Would the recruiter champion you or just pass you along?
+
+### Answer-by-Answer Analysis
+
+| # | Topic | Question (summary) | Rating | Trust Impact | Anti-Patterns | Notes |
+|---|-------|-------------------|--------|--------------|---------------|-------|
+| 1 | Pitch | Self-introduction | 4/5 | ✅ | — | Strong opening, close to coached version |
+| 2 | Technical | [Technical requirement] | 2/5 | ❌ | Didn't answer yes/no | Recruiter asked twice, creates doubt |
+| ... | | | | | | |
+
+### Anti-Patterns Triggered
+
+- [x] Pattern name — specific example from transcript
+- [ ] Pattern name — NOT triggered
+
+### What Went Well
+- [bullet points of strongest moments]
+
+### What Needs Work
+- [bullet points of weakest moments with coached alternatives]
+
+### Strong Phrasings to Keep
+- [any new strong phrasings worth saving to coached-answers.md]
+
+### Deep Review Questions Coverage
+- [which tough questions were asked, which weren't, how they were handled]
+
+### Focus for Next Session
+- [2-3 specific priorities based on this session's patterns]
+```
+
+### Step 5: Discuss with User
+
+Present the debrief report and discuss:
+- Ask if the confidence rating feels right
+- Ask if any answers felt better/worse than the analysis suggests
+- Ask if any strong phrasings should be saved to coached-answers.md
+- Confirm the anti-pattern assessment
+
+### Step 6: Log Session
+
+After the user confirms the assessment:
+
+1. **Save transcript** — save the voice simulation transcript to `coaching/session-history/YYYY-MM-DD-[role-slug]-voice.md`
+
+2. **Create session file** at `coaching/progress-recruiter/YYYY-MM-DD-[role-slug].md` using the template structure. Include:
+   - Mode: **Voice simulation**
+   - All anti-patterns with checkboxes (checked = triggered)
+   - What went well / what needs work
+   - Coach's key feedback
+   - Strong phrasings to keep
+   - Focus for next session
+
+3. **Update summary** at `coaching/progress-recruiter/_summary.md`:
+   - Increment session count
+   - Update last session date
+   - Recalculate average confidence rating
+   - Update anti-pattern scorecard (increment counts, update "Last Seen", update trends)
+   - Add session to the Session Index table
+
+4. **Update coached-answers.md** if the user approved any new strong phrasings.
+
+5. **Update anti-pattern tracker** at `coaching/anti-pattern-tracker.md`:
+   - Update status, last-seen, and trend for any pattern triggered or notably absent
+   - Move patterns between status categories if warranted (e.g., persistent → resolved after multiple clean sessions)
+   - Add new patterns if discovered during the simulation
+   - Add a line to the Update Log
+
+### Session File Naming
+
+If a session file for this date and role already exists (from a text-based coaching session), append a suffix:
+- First session: `2026-02-10-target-role-slug.md`
+- Second session same day: `2026-02-10-target-role-slug-v2.md`
+- Voice simulation: `2026-02-11-target-role-slug-voice.md` (prefer `-voice` suffix to distinguish from text sessions)
