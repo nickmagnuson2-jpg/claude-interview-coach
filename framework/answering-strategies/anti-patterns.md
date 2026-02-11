@@ -191,9 +191,9 @@ Before answering any recruiter question, silently ask: **"What checkbox are they
 
 ---
 
-### **9. Hedging or Waffling on Rate/Availability**
+### **9. Hedging or Waffling on Rate, Availability, or Logistics**
 
-**What it is:** Showing uncertainty about your rate or availability when asked.
+**What it is:** Showing uncertainty about your rate, availability, or logistics when asked.
 
 **Why it's bad:** Signals lack of confidence. Makes the recruiter think you'll fold in negotiations.
 
@@ -205,11 +205,19 @@ Before answering any recruiter question, silently ask: **"What checkbox are they
 ❌ "I think I could start April 1st, probably, unless..."
 - Yes or no. If there's a condition, state it clearly.
 
+❌ "Well... I guess three days on-site is ok..."
+- "I guess" is not a commitment. The recruiter can't write "candidate confirmed on-site."
+
+❌ "I could maybe do hybrid, it depends on the week..."
+- Vague. State what you CAN do, then ask about flexibility.
+
 **Instead:** Direct statement → Question back.
 
 ✓ **Freelance:** "My rate is [amount]. Is that within budget?" / **DE:** "Mein Stundensatz liegt bei [XXX] Euro. Liegt das im Budget?"
 ✓ **Permanent:** "My salary expectation is [amount]. Does that fit the range?"
 ✓ "I'm available from [date]. Does that work with the project timeline?"
+✓ "I'm based in Berlin, so three days on-site works. Is the team flexible on which days?"
+✓ "My preference is two days, but I can do three. Is there flexibility?"
 
 ---
 
@@ -304,6 +312,29 @@ Alternative differentiator templates (choose the one that fits your story):
 **Why it's bad:** The recruiter needs to write a number on their checklist. "Yes, extensive experience" doesn't tick the box.
 
 **Instead:** Say the number. Then stop.
+
+---
+
+### **16. Firm Without Framing**
+
+**What it is:** Holding your position on rate, salary, or conditions without giving the recruiter reasons to justify it internally.
+
+**Why it's bad:** The recruiter is your advocate inside the process. If you say "110k, take it or leave it" they can't go to the hiring manager and explain why. You sound stubborn instead of valuable.
+
+**Examples:**
+
+❌ "No. 110 would be good."
+- Held the number (good), but gave zero justification. The recruiter has nothing to write.
+
+❌ "That's my rate. It's non-negotiable."
+- Firm, but adversarial. The recruiter stops advocating for you.
+
+**Instead:** Hold your position + brief justification + question back.
+
+✓ "I understand that's the upper end. For what I bring — [2-3 concrete differentiators] — I think that's where I should land. Is there flexibility in the package beyond base?"
+✓ "My rate is [amount]. That reflects [scope/certs/experience]. Is that within budget?"
+
+**Key:** The recruiter isn't your opponent. They need ammunition to fight for you internally. Give it to them.
 
 ---
 
