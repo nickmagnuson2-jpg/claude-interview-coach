@@ -28,7 +28,7 @@ Load the following data files to inform the session:
 - `data/profile.md` — personal info, rates, availability, logistics
 - `data/certifications.md` — all certifications with dates
 - `data/skills.md` — complete skill inventory
-- `coaching/known-vulnerabilities.md` — known pressure points and vulnerability topics for targeted probing
+- `coaching/pressure-points.md` — known pressure points for targeted probing
 - `coaching/anti-pattern-tracker.md` — current status of all anti-patterns (which are resolved, which to watch for)
 - `data/professional-identity.md` — identity, values, narrative patterns (if exists from `/extract-identity`)
 - `coaching/coached-answers.md` — use the **15-Second Pitch (Recruiter)** as the baseline pitch
@@ -85,7 +85,7 @@ When tough mode is selected, before starting the session:
 ### Preparation
 
 1. **Find the CV** — look for the most recent file in `output/` matching the target role, or ask which CV was submitted.
-2. **Load known vulnerabilities** from `coaching/known-vulnerabilities.md`. These are role-independent pressure points the candidate is known to struggle with. Focus on entries with "Active" or "Improving" status.
+2. **Load pressure points** from `coaching/pressure-points.md`. These are role-independent pressure points the candidate is known to struggle with. Focus on entries with "Active" or "Improving" status.
 3. **Run a CV-specific devil's advocate scan** against the target role. Identify:
    - Timeline issues (overlapping engagements, gaps, vague dates)
    - Experience depth doubts (skills listed at low years for a role requiring depth, technologies not substantiated by project bullets)
@@ -129,15 +129,16 @@ In addition to the standard coaching, tough mode coaching should specifically as
 
 When the session wraps up (or the candidate says they're done):
 
-1. **Save transcript** — save the full session transcript (IC + OOC) to `coaching/session-history/YYYY-MM-DD-role-slug.md`
-2. **Create a session file** — copy `coaching/progress-recruiter/_template.md` to `coaching/progress-recruiter/YYYY-MM-DD-role-slug.md` and fill in all sections based on the session
-3. **Update the summary** — in `coaching/progress-recruiter/_summary.md`:
+1. **Deliver Takeaway** — before saving anything, deliver a **Takeaway** to the candidate in chat: a 3-4 sentence executive summary covering what happened in the session, what the dominant patterns were, what went well, and the single most important thing to fix next. This is the candidate's immediate debrief — keep it direct and actionable.
+2. **Save transcript** — save the full session transcript (IC + OOC) to `coaching/session-history/YYYY-MM-DD-role-slug.md`
+3. **Create a session file** — copy `framework/templates/recruiter-session.md` to `coaching/progress-recruiter/YYYY-MM-DD-role-slug.md` and fill in all sections based on the session
+4. **Update the summary** — in `coaching/progress-recruiter/_summary.md` (if it doesn't exist yet, copy `framework/templates/recruiter-summary.md` first):
    - Add a row to the Session Index linking to the new file
    - Increment anti-pattern counts in the Scorecard for any that were triggered, update "Last Seen" date, and set Trend (↑ worse / → stable / ↓ improving)
    - Recalculate Overall Status (session count, average confidence, top recurring anti-pattern)
-4. **Save strong phrasings** — if any answers from the session are stronger than existing coached answers (or cover new topics), update `coaching/coached-answers.md` directly
-5. **Update vulnerabilities** — if new pressure points were discovered or existing ones changed status, update `coaching/known-vulnerabilities.md`
-6. **Update anti-pattern tracker** — in `coaching/anti-pattern-tracker.md`:
+5. **Save strong phrasings** — if any answers from the session are stronger than existing coached answers (or cover new topics), update `coaching/coached-answers.md` directly
+6. **Update pressure points** — if new pressure points were discovered or existing ones changed status, update `coaching/pressure-points.md`
+7. **Update anti-pattern tracker** — in `coaching/anti-pattern-tracker.md`:
    - Update status, last-seen, and trend for any pattern triggered or notably absent
    - Move patterns between status categories if warranted (e.g., persistent → resolved after multiple clean sessions)
    - Add new patterns if discovered during the session

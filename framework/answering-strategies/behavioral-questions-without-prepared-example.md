@@ -4,7 +4,7 @@
 
 Behavioral questions ("Tell me about a time when...") require **concrete STAR stories** (Situation-Action-Result).
 
-A common vulnerability: **cold recall of specifics under pressure** — not a confidence issue, a memory retrieval issue.
+A common pressure point: **cold recall of specifics under pressure** — not a confidence issue, a memory retrieval issue.
 
 **Best prevention:** Prepare 3-5 concrete examples per major project in advance (see cheat sheets).
 

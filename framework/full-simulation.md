@@ -104,8 +104,8 @@ Three concrete, actionable changes for the next simulation. Not generic advice �
 When the debrief is delivered:
 
 1. **Save transcript** — save the full simulation transcript to `coaching/session-history/YYYY-MM-DD-[FULL-SIM]-role-slug.md`
-2. **Create a session file** — copy the relevant template (`coaching/progress-recruiter/_template.md` or `coaching/progress-interview/_template.md`) to `coaching/progress-recruiter/YYYY-MM-DD-[FULL-SIM]-role-slug.md` or `coaching/progress-interview/YYYY-MM-DD-[FULL-SIM]-role-slug.md`. Fill in all standard sections, then append the full debrief as an additional "## Full Simulation Debrief" section.
-3. **Update the summary** — in the relevant `_summary.md`:
+2. **Create a session file** — copy the relevant template (`framework/templates/recruiter-session.md` or `framework/templates/interview-session.md`) to `coaching/progress-recruiter/YYYY-MM-DD-[FULL-SIM]-role-slug.md` or `coaching/progress-interview/YYYY-MM-DD-[FULL-SIM]-role-slug.md`. Fill in all standard sections, then append the full debrief as an additional "## Full Simulation Debrief" section.
+3. **Update the summary** — in the relevant `_summary.md` (if it doesn't exist yet, copy the matching summary template from `framework/templates/` first):
    - Add a row to the Session Index with `[FULL-SIM]` tag
    - Increment anti-pattern counts from the Anti-Pattern-Log, update "Last Seen" date, set Trend
    - Recalculate Overall Status

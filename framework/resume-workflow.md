@@ -22,7 +22,7 @@ When asked to create a targeted resume for a specific role:
 
     **Sources to cross-reference:**
     - `coaching/coached-answers.md` — reuse existing coached answers for common topics (rate pushback, availability, key technology questions, etc.) instead of writing new ones from scratch. Adapt to the specific role.
-    - `coaching/known-vulnerabilities.md` + `framework/answering-strategies/anti-patterns.md` — scan for vulnerabilities and anti-patterns relevant to this role and add **"Do NOT say"** warnings for the most likely traps (e.g., volunteering negatives on thin experience areas, over-explaining to recruiters, confirming concerns)
+    - `coaching/pressure-points.md` + `framework/answering-strategies/anti-patterns.md` — scan for pressure points and anti-patterns relevant to this role and add **"Do NOT say"** warnings for the most likely traps (e.g., volunteering negatives on thin experience areas, over-explaining to recruiters, confirming concerns)
     - `data/certifications.md` — verify cert status. If any cert listed in the CV is expired or renewal-pending, prepare the handling answer in the cheat sheet rather than ignoring it.
 
     **Cheat sheet quality rules:**

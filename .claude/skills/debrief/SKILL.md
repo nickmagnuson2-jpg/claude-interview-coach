@@ -34,7 +34,7 @@ Load these files in parallel using the CV path to derive filenames:
 3. **Deep review** — `*-DEEP-REVIEW.md` matching CV filename (to know what tough questions were expected)
 4. **Anti-pattern scorecard** — `coaching/progress-recruiter/_summary.md`
 5. **Anti-pattern tracker** — `coaching/anti-pattern-tracker.md` (global pattern status — which are resolved, which to watch for)
-6. **Session template** — `coaching/progress-recruiter/_template.md`
+6. **Session template** — `framework/templates/recruiter-session.md`
 
 If the transcript is not yet in the conversation, ask the user to paste it.
 
@@ -98,6 +98,10 @@ Present the analysis to the user in this structure:
 **Questions asked:** [count]
 **Overall confidence rating:** [1-5, based on answer quality average]
 
+### Takeaway
+
+[3-4 sentence executive summary: what happened in the simulation, what the dominant patterns were, what went well, and the single most important thing to fix next.]
+
 ### Recruiter Assessment Framework
 
 Real recruiter screening has two dimensions:
@@ -156,7 +160,8 @@ After the user confirms the assessment:
 
 1. **Save transcript** — save the voice simulation transcript to `coaching/session-history/YYYY-MM-DD-[role-slug]-voice.md`
 
-2. **Create session file** at `coaching/progress-recruiter/YYYY-MM-DD-[role-slug].md` using the template structure. Include:
+2. **Create session file** — copy `framework/templates/recruiter-session.md` to `coaching/progress-recruiter/YYYY-MM-DD-[role-slug].md`. Include:
+   - Takeaway (copy from the debrief report)
    - Mode: **Voice simulation**
    - All anti-patterns with checkboxes (checked = triggered)
    - What went well / what needs work
@@ -164,7 +169,7 @@ After the user confirms the assessment:
    - Strong phrasings to keep
    - Focus for next session
 
-3. **Update summary** at `coaching/progress-recruiter/_summary.md`:
+3. **Update summary** at `coaching/progress-recruiter/_summary.md` (if it doesn't exist yet, copy `framework/templates/recruiter-summary.md` first):
    - Increment session count
    - Update last session date
    - Recalculate average confidence rating

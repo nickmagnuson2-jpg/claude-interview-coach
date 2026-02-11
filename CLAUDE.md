@@ -32,25 +32,29 @@ Owner details live in `data/profile.md` (gitignored — prevents personal data l
 │   ├── mock-interview.md        # Hiring manager mock interview coaching methodology
 │   ├── full-simulation.md       # Full simulation mode (uninterrupted conversation + debrief)
 │   ├── voice-export.md          # Voice mode export — recruiter simulation prompt for Claude App
-│   └── answering-strategies/     # In-call answering strategies (quick-reference for interviews)
-│       ├── behavioral-questions-without-prepared-example.md  # Blank Mind Protocol for STAR questions
-│       ├── gap-reframing.md                                  # Handling missing skills/experience
-│       ├── pin-down-defense.md                               # Handling pressure tests on gaps
-│       ├── question-back-technique.md                        # Turning questions around strategically
-│       ├── anti-patterns.md                                  # What NOT to do (60-second pre-call checklist)
-│       └── direct-answer-structure.md                        # Answer first, explain second (fixes essay structure)
+│   ├── answering-strategies/     # In-call answering strategies (quick-reference for interviews)
+│   │   ├── behavioral-questions-without-prepared-example.md  # Blank Mind Protocol for STAR questions
+│   │   ├── gap-reframing.md                                  # Handling missing skills/experience
+│   │   ├── pin-down-defense.md                               # Handling pressure tests on gaps
+│   │   ├── question-back-technique.md                        # Turning questions around strategically
+│   │   ├── anti-patterns.md                                  # What NOT to do (60-second pre-call checklist)
+│   │   └── direct-answer-structure.md                        # Answer first, explain second (fixes essay structure)
+│   └── templates/               # Templates for new data and session files
+│       ├── project.md            #   New project file template
+│       ├── recruiter-session.md  #   Recruiter screening session log template
+│       ├── recruiter-summary.md  #   Recruiter progress summary template
+│       ├── interview-session.md  #   Interview session log template
+│       └── interview-summary.md  #   Interview progress summary template
 ├── coaching/
 │   ├── coached-answers.md       # Spoken pitches, topical answers, and high-risk question frameworks (refined in sessions)
 │   ├── anti-pattern-tracker.md  # Personal anti-pattern status: resolved/persistent/stable, trends, update log
-│   ├── known-vulnerabilities.md  # Tactical list of pressure points for tough mode probing (updated after sessions)
+│   ├── pressure-points.md        # Tactical list of pressure points for tough mode probing (updated after sessions)
 │   ├── session-history/         # Full session transcripts (all coaching modes + voice simulations)
 │   ├── progress-recruiter/       # Recruiter screening progress tracking
-│   │   ├── _summary.md           #   Scorecard, overall stats, session index
-│   │   ├── _template.md          #   Template for new session files
+│   │   ├── _summary.md           #   Scorecard, overall stats, session index (initialized from templates/)
 │   │   └── YYYY-MM-DD-*.md      #   Individual session logs
 │   └── progress-interview/       # Hiring manager interview progress tracking
-│       ├── _summary.md           #   Scorecard, overall stats, session index
-│       ├── _template.md          #   Template for new session files
+│       ├── _summary.md           #   Scorecard, overall stats, session index (initialized from templates/)
 │       └── YYYY-MM-DD-*.md      #   Individual session logs
 ├── data/
 │   ├── project-index.md       # Lightweight index of all projects (for quick matching)
@@ -62,7 +66,6 @@ Owner details live in `data/profile.md` (gitignored — prevents personal data l
 │   ├── companies.md           # Own companies (if applicable)
 │   ├── project-background/    # Sensitive project background (NEVER use in CVs/resumes)
 │   └── projects/
-│       ├── _template.md         # Template for new project files
 │       └── *.md                 # One file per project/engagement
 ├── examples/                    # Fictional example data (try features before importing your own)
 │   ├── data/                    #   Complete fictional freelancer profile
@@ -93,7 +96,7 @@ When generating resumes or preparing interview materials, **completely ignore** 
 
 ### Projects (`data/projects/*.md`)
 
-Each project file follows a consistent structure with these fields: **Period**, **Role**, **Client**, **Industry**, **Location**, **Type**, then sections for **Description**, **Responsibilities**, **Key Achievements**, **Technologies**, and **Tags**. See `data/projects/_template.md` for the full field list including optional fields.
+Each project file follows a consistent structure with these fields: **Period**, **Role**, **Client**, **Industry**, **Location**, **Type**, then sections for **Description**, **Responsibilities**, **Key Achievements**, **Technologies**, and **Tags**. See `framework/templates/project.md` for the full field list including optional fields.
 
 **Type values:** `flagship` | `consulting` | `contract` | `employment` | `co-founded` | `internship` | `side-project`. A `flagship` is the candidate's single most significant role or project — typically multi-year, high-impact, and central to their professional identity. Not every candidate has one, and that's normal. Not every candidate has a flagship — it's optional.
 
@@ -142,7 +145,7 @@ For voice-based practice, three skills work together:
 
 - **First-time setup:** Run `/import-cv` with a CV file path or paste text. Extracts structured data into `data/` files. Can be run repeatedly — old CV first, new CV later, data merges automatically.
 - **Discovering professional identity:** Run `/extract-identity` for a guided coaching conversation that produces `data/professional-identity.md` — strengths, growth edges, narrative patterns, values.
-- **Adding new experience:** Create a new project file in `data/projects/` (copy `_template.md`), add an entry to `data/project-index.md`, and update `data/skills.md` if new skills were used
+- **Adding new experience:** Create a new project file in `data/projects/` (copy `framework/templates/project.md`), add an entry to `data/project-index.md`, and update `data/skills.md` if new skills were used
 - **Updating existing data:** Edit the relevant file in `data/`
 - **Generating a resume:** Provide a job description or role requirements, and ask for a targeted resume
 - **Practising for interviews:** Provide a job description and ask for a recruiter screening or mock interview session
