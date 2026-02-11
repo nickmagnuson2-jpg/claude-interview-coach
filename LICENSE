@@ -3,7 +3,7 @@
 This repository uses a dual license:
 
 - **Code** (tools/, .claude/skills/, CLAUDE.md) is licensed under the MIT License
-- **Written methodology** (framework/) is licensed under CC BY 4.0
+- **Written methodology** (framework/, docs/) is licensed under CC BY 4.0
 
 ---
 
@@ -35,8 +35,8 @@ SOFTWARE.
 
 Copyright (c) 2025-2026 Raphael Otten
 
-The written methodology in this repository (framework/, coaching/ templates,
-and answering strategies) is licensed under the Creative Commons Attribution
+The written methodology in this repository (framework/, docs/) is licensed
+under the Creative Commons Attribution
 4.0 International License.
 
 You are free to:
