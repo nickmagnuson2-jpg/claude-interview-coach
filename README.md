@@ -41,11 +41,7 @@ Then open Claude Code in the repo and try:
 
 When you're ready to use your own data, delete the examples and continue with step 2.
 
-### 2. Fill in your profile
-
-Open `data/profile.md` and fill in your name, title, and professional details. This file is gitignored (your personal data stays private, even on public forks). Claude reads it at the start of every session to personalise all outputs.
-
-### 3. Import your data
+### 2. Import your data
 
 Import your existing CV:
 
@@ -53,15 +49,22 @@ Import your existing CV:
 /import-cv path/to/your-cv.pdf
 ```
 
-This extracts your profile, skills, certifications, education, and projects into structured `data/` files. You can also paste CV text directly:
+This creates your profile, skills, certifications, education, and projects as structured `data/` files — including `data/profile.md` (gitignored, so your personal data stays private even on public forks).
+
+You can also paste CV text directly:
 
 ```
 /import-cv paste
 ```
 
-**Import multiple CVs** to build a complete picture — an older CV first, then a newer one. Data merges automatically: new projects get added, existing ones get enriched, nothing gets lost.
+**Import multiple documents** to build a complete picture — an older CV first, then a newer one, a LinkedIn PDF export, a project list. Each import merges with existing data: new projects get added, existing ones get enriched, nothing gets lost.
 
-After importing, fill in the TODO markers (especially rates and key achievements — these are rarely on CVs but make your generated resumes much stronger).
+### 3. Review and fill gaps
+
+After importing, review the generated files and fill in the `TODO` markers. The most impactful ones:
+
+- **Compensation** and **availability** in `data/profile.md` (never on CVs, but essential for targeting)
+- **Key achievements** in each project file (makes generated CVs dramatically stronger)
 
 ### 3b. Discover your professional identity (optional but valuable)
 
