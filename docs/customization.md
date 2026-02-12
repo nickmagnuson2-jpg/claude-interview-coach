@@ -19,6 +19,7 @@ The manifest has a YAML frontmatter block and markdown sections:
 name: Fintech
 description: Interview coaching and CV tailoring for fintech roles
 scope: coaching, cv
+overrides_difficulty_choice: false
 ---
 ```
 
@@ -49,7 +50,7 @@ financial services, PSD2, regulatory compliance, or transaction processing.
 
 Be specific enough to avoid false positives, broad enough to catch relevant roles. "Activate for all roles" is valid for behavioral plugins (e.g. a stress-test mode) that aren't industry-specific.
 
-**When multiple plugins match:** All matching plugins load. Their content sections merge (questions from both plugins enter the pool, anti-patterns from both get tracked). If multiple plugins have conflicting session behavior modifiers, the result is unpredictable -- avoid this by keeping behavioral plugins scoped narrowly or using `data/plugins.md` to ensure only one behavioral plugin is active at a time.
+**When multiple plugins match:** All matching plugins load. Their content sections merge (questions from both plugins enter the pool, anti-patterns from both get tracked). If multiple plugins have conflicting session behavior modifiers, the result is unpredictable -- avoid this by keeping behavioral plugins scoped narrowly or using `data/plugin-activation.md` to ensure only one behavioral plugin is active at a time.
 
 ### What a plugin can add
 
@@ -63,9 +64,21 @@ Be specific enough to avoid false positives, broad enough to catch relevant role
 
 **Content sections** (questions, anti-patterns, strategies, CV rules) are additive -- they add to the core set, they don't remove from it. A plugin cannot disable a core anti-pattern or suppress a core CV quality check.
 
-**Session behavior** is an override by design. A plugin that says "no positive feedback" replaces the default coaching tone for that session. This is intentional -- it's how you create stress-test modes, brutal-honesty coaches, or hostile interviewer personas.
+**Session behavior** is an override by design. A plugin that says "no positive feedback" replaces the default coaching tone for that session. This is intentional -- it's how you create stress-test modes, brutal-honesty coaches, or hostile interviewer personas. For example, a mean-mode plugin that sets the interviewer to hostile and impatient produces exchanges like:
 
-Since this is a prompt-driven system, there is no technical enforcement boundary. A plugin *could* include instructions that contradict core workflows. If something breaks, disable the plugin via `data/plugins.md`.
+> **Recruiter** *(impatient)*: Right. I see you've been freelancing since 2019. Now you're applying for a permanent position. Why the switch?
+>
+> **Candidate:** I want more regular working hours and the chance to go deep on one topic, instead of seeing something new every two to three months.
+>
+> *(Short pause)*
+>
+> **Recruiter:** Regular working hours. For an L3 position with on-call rotation. You did read the job posting, right?
+
+Without the plugin, the default recruiter is professional and direct but not hostile. The plugin overrides the tone section of the recruiter persona.
+
+**`overrides_difficulty_choice`** controls whether the plugin replaces the normal/tough mode selection at session start. When set to `true`, the framework skips the "Normal or tough round?" question and uses the plugin's Session Behavior to define session intensity instead. Default is `false`. Set this to `true` for any plugin whose Session Behavior defines the overall interviewer tone and pressure level (e.g. stress-test, mean-mode, or gentle-mode plugins).
+
+Since this is a prompt-driven system, there is no technical enforcement boundary. A plugin *could* include instructions that contradict core workflows. If something breaks, disable the plugin via `data/plugin-activation.md`.
 
 ### Plugin structure
 
@@ -98,7 +111,7 @@ Core anti-patterns use numbers 1-16. Plugin anti-patterns should use a letter pr
 
 ### Activation control
 
-By default, all plugins in `plugins/` are active. To change this, edit `data/plugins.md`:
+By default, all plugins in `plugins/` are active. To change this, copy `framework/templates/plugin-activation.md` to `data/plugin-activation.md` and edit it:
 
 | Mode | Behaviour |
 |---|---|

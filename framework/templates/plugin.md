@@ -2,9 +2,12 @@
 name: Plugin Name
 description: One-line description of what this plugin adds
 scope: coaching, cv
+overrides_difficulty_choice: false
 ---
 
 <!-- scope options: coaching, cv, or both (comma-separated) -->
+<!-- overrides_difficulty_choice: set to true if this plugin's Session Behavior
+     replaces the normal/tough difficulty choice entirely. Default is false. -->
 
 # Plugin Name
 
@@ -44,10 +47,14 @@ Activate when the target role or job ad involves: [keywords, industries, or role
 
 ## Session Behavior
 
-<!-- Optional: modify interviewer persona or coaching style when this plugin is active.
-     These layer on top of the core persona — they adjust tone and behavior, not replace the role.
+<!-- Optional: set interviewer persona and coaching style for this plugin.
+     Plugins load BEFORE the session type file (step 4 in interview-workflow.md).
+     If Session Behavior is defined here, the session type file's default tone
+     is skipped -- these instructions become the persona for the session.
+     Core workflow steps (question sequencing, progress tracking)
+     are unchanged.
 
-     What you can modify:
+     What you can set:
      - Interviewer tone (skeptical, impatient, aggressive, friendly, formal)
      - Coaching style (brutally direct, no encouragement, Socratic, etc.)
      - Pacing (rapid-fire, interrupts long answers, never lets silences sit)

@@ -55,6 +55,8 @@ Before answering any recruiter question, silently ask: **"What checkbox are they
 
 **Instead:** Only address what they explicitly ask. If they don't ask, it doesn't exist in this conversation.
 
+**Not this anti-pattern:** When the recruiter asks directly about something you don't have ("Do you have Java experience?"), acknowledging the gap is expected -- that's gap-reframing, not volunteering. See #10 for how the acknowledgment itself can go wrong.
+
 ---
 
 ### **2. Over-Explaining / Lecturing the Recruiter**
@@ -221,21 +223,32 @@ Before answering any recruiter question, silently ask: **"What checkbox are they
 
 ---
 
-### **10. Saying "Not Really" or "No, I Haven't"**
+### **10. Saying "Not Really" or "No, I Haven't" / Heavy Negative Openers**
 
-**What it is:** Giving a flat negative when asked about a skill or experience, with no reframe.
+**What it is:** Giving a flat negative when asked about a skill or experience, with no reframe. Also: opening with a heavy negative statement that becomes the headline even when a pivot follows.
 
-**Why it's bad:** This is the worst possible answer. You disqualified yourself with zero attempt to show adjacent strengths.
+**Why it's bad:** A standalone negative disqualifies you with zero attempt to show adjacent strengths. A heavy negative opener ("I have no X experience in production") lands hard enough to become what the recruiter writes down, even if your pivot afterward is strong.
 
 **Examples:**
 
 ❌ **Recruiter:** "Do you have Terraform experience?"
 ❌ **You:** "Not really, no."
-- You just ended the conversation.
+- Flat negative, no pivot. You just ended the conversation.
+
+❌ **Recruiter:** "Walk me through your Java experience."
+❌ **You:** "While I have no Java experience in production, I have..."
+- The pivot follows, but "no Java experience in production" is a full sentence that lands as the headline. The recruiter writes down the negative, not the pivot.
 
 **Instead:** ALWAYS reframe. See [gap-reframing.md](gap-reframing.md).
 
 ✓ "Not Terraform specifically, but I manage [N] environments with [your IaC tool]. Does the client need Terraform specifically, or IaC experience?"
+
+**Where gap-reframing is NOT this anti-pattern:** When the recruiter asks directly, a minimal acknowledgment followed by an immediate pivot is correct technique:
+
+✓ "Not [X] specifically, but I [adjacent strength]." -- speed bump, not a wall. The pivot is the headline.
+✓ Skipping the negative entirely and leading with what you have -- also fine.
+
+**The test:** Would the recruiter's notes say "no X experience" (anti-pattern) or "has Y and Z, not X specifically" (gap-reframing)? If your negative is a standalone sentence or the longest part of your answer, it's this anti-pattern. If it's a half-second clause before a concrete pivot, it's clean.
 
 ---
 

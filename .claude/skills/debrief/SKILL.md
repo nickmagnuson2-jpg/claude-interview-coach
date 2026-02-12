@@ -158,9 +158,7 @@ Present the debrief report and discuss:
 
 After the user confirms the assessment:
 
-1. **Save transcript** — save the voice simulation transcript to `coaching/session-history/YYYY-MM-DD-[role-slug]-voice.md`
-
-2. **Create session file** — copy `framework/templates/recruiter-session.md` to `coaching/progress-recruiter/YYYY-MM-DD-[role-slug].md`. Include:
+1. **Create session file** — copy `framework/templates/recruiter-session.md` to `coaching/progress-recruiter/YYYY-MM-DD-HHMM-[role-slug].md`. Include:
    - Takeaway (copy from the debrief report)
    - Mode: **Voice simulation**
    - All anti-patterns with checkboxes (checked = triggered)
@@ -169,22 +167,22 @@ After the user confirms the assessment:
    - Strong phrasings to keep
    - Focus for next session
 
-3. **Update summary** at `coaching/progress-recruiter/_summary.md` (if it doesn't exist yet, copy `framework/templates/recruiter-summary.md` first):
+2. **Update summary** at `coaching/progress-recruiter/_summary.md` (if it doesn't exist yet, copy `framework/templates/recruiter-summary.md` first):
    - Increment session count
    - Update last session date
    - Recalculate average confidence rating
    - Update anti-pattern scorecard (increment counts, update "Last Seen", update trends)
    - Add session to the Session Index table
 
-4. **Update coached-answers.md** if the user approved any new strong phrasings.
+3. **Update coached-answers.md** if the user approved any new strong phrasings.
 
-5. **Update anti-pattern tracker** at `coaching/anti-pattern-tracker.md`:
+4. **Update anti-pattern tracker** at `coaching/anti-pattern-tracker.md`:
    - Update status, last-seen, and trend for any pattern triggered or notably absent
    - Move patterns between status categories if warranted (e.g., persistent → resolved after multiple clean sessions)
    - Add new patterns if discovered during the simulation
    - Add a line to the Update Log
 
-6. **Data enrichment** — check if the simulation surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
+5. **Data enrichment** — check if the simulation surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
 
 ### Session File Naming
 

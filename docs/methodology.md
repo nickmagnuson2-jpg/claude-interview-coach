@@ -238,7 +238,6 @@ coaching/                        ← Coaching outputs and progress (private)
   ├── coached-answers.md          ← Refined spoken phrasings
   ├── anti-pattern-tracker.md     ← Anti-pattern status, trends, update log
   ├── pressure-points.md          ← Pressure points for tough mode probing
-  ├── session-history/            ← Full session transcripts (all modes)
   ├── progress-recruiter/         ← Session logs + scorecard
   └── progress-interview/         ← Session logs + scorecard
 .claude/skills/                  ← Claude Code skill definitions (automation entry points)

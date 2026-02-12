@@ -45,12 +45,13 @@ Owner details live in `data/profile.md` (gitignored — prevents personal data l
 │       ├── recruiter-session.md  #   Recruiter screening session log template
 │       ├── recruiter-summary.md  #   Recruiter progress summary template
 │       ├── interview-session.md  #   Interview session log template
-│       └── interview-summary.md  #   Interview progress summary template
+│       ├── interview-summary.md  #   Interview progress summary template
+│       ├── plugin.md             #   New plugin manifest template
+│       └── plugin-activation.md  #   Plugin activation config template (copy to data/plugin-activation.md)
 ├── coaching/
 │   ├── coached-answers.md       # Spoken pitches, topical answers, and high-risk question frameworks (refined in sessions)
 │   ├── anti-pattern-tracker.md  # Personal anti-pattern status: resolved/persistent/stable, trends, update log
 │   ├── pressure-points.md        # Tactical list of pressure points for tough mode probing (updated after sessions)
-│   ├── session-history/         # Full session transcripts (all coaching modes + voice simulations)
 │   ├── progress-recruiter/       # Recruiter screening progress tracking
 │   │   ├── _summary.md           #   Scorecard, overall stats, session index (initialized from templates/)
 │   │   └── YYYY-MM-DD-*.md      #   Individual session logs
@@ -65,7 +66,6 @@ Owner details live in `data/profile.md` (gitignored — prevents personal data l
 │   ├── skills.md              # Complete skill inventory with experience levels
 │   ├── education.md           # Degrees, training, qualifications
 │   ├── companies.md           # Own companies (if applicable)
-│   ├── plugins.md             # Plugin activation config (blocklist/allowlist)
 │   ├── project-background/    # Sensitive project background (NEVER use in CVs/resumes)
 │   └── projects/
 │       └── *.md                 # One file per project/engagement

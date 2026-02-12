@@ -65,7 +65,7 @@ Role assignment for Claude:
 >
 > **All example phrasings above are in English. When generating the prompt, translate them to match the CV language.**
 
-**Plugin Session Behavior:** Check `data/plugins.md` for activation config (if the file is missing, all plugins are active). Scan `plugins/*/plugin.md` for enabled plugins whose scope includes `coaching` and whose activation criteria match the target role/industry. If any active plugin has a `## Session Behavior` section with **Interviewer** instructions, incorporate them into the System Instruction above — they override the default Tone section (e.g. a mean-mode plugin replaces "Not hostile or mean" with its own tone). If no plugin provides Session Behavior, use the defaults as written. If `plugins/` is empty or missing, skip this check.
+**Plugin Session Behavior:** Check `data/plugin-activation.md` for activation config (if the file is missing, all plugins are active). Scan `plugins/*/plugin.md` for enabled plugins whose scope includes `coaching` and whose activation criteria match the target role/industry. If any active plugin has a `## Session Behavior` section with **Interviewer** instructions, incorporate them into the System Instruction above — they override the default Tone section (e.g. a mean-mode plugin replaces "Not hostile or mean" with its own tone). If no plugin provides Session Behavior, use the defaults as written. If `plugins/` is empty or missing, skip this check.
 
 ### 2. Recruiter Persona
 
@@ -111,7 +111,7 @@ Always included:
 
 #### D. Plugin Questions
 
-Check `data/plugins.md` for activation config (if the file is missing, all plugins are active). Scan `plugins/*/plugin.md` for enabled plugins whose scope includes `coaching` and whose activation criteria match the target role/industry. If any active plugin provides interview questions, include them here as the lowest-priority tier (below Standard Recruiter Topics). If `plugins/` is empty or missing, skip this source.
+Check `data/plugin-activation.md` for activation config (if the file is missing, all plugins are active). Scan `plugins/*/plugin.md` for enabled plugins whose scope includes `coaching` and whose activation criteria match the target role/industry. If any active plugin provides interview questions, include them here as the lowest-priority tier (below Standard Recruiter Topics). If `plugins/` is empty or missing, skip this source.
 
 ### 5. Call Flow Guidelines
 

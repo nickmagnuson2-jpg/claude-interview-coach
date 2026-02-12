@@ -13,6 +13,9 @@
 __pycache__/
 *.pyc
 
+# Test plugins (personal experiments, not committed)
+/plugins/test-*/
+
 # System
 nul
 .DS_Store

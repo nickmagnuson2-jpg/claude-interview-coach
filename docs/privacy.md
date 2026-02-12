@@ -10,7 +10,7 @@ The `.gitignore` excludes all personal data directories by default:
 |---|---|---|
 | `data/` | Profile, projects, skills, certifications, education, companies, professional identity | Yes |
 | `data/project-background/` | Sensitive background (legal disputes, failures, internal assessments) | Yes (inside `data/`) |
-| `coaching/` | Session transcripts, coached answers, anti-pattern tracking, progress scorecards | Yes |
+| `coaching/` | Coached answers, anti-pattern tracking, progress scorecards | Yes |
 | `output/` | Generated CVs, cheat sheets, review reports | Yes |
 | `files/` | PDF input files (CVs you import) | Yes |
 
@@ -51,9 +51,8 @@ Not all personal data is equally sensitive:
 
 1. **Contact and compensation** (`data/profile.md`) - Name, email, phone, rates, salary expectations. Highest sensitivity.
 2. **Project background** (`data/project-background/`) - Legal disputes, failed projects, internal assessments. Never used in CVs or client-facing materials, even by the framework itself. This is internal reference only.
-3. **Coaching transcripts** (`coaching/session-history/`) - Raw practice sessions where you make mistakes, struggle with questions, or reveal weaknesses. Not for external consumption.
-4. **Professional data** (`data/projects/`, `data/skills.md`, etc.) - Work history, skills, certifications. The same information that appears on a CV, but in richer detail.
-5. **Generated output** (`output/`) - Tailored CVs and reports. Contains personal data but is designed for sharing with specific recipients.
+3. **Professional data** (`data/projects/`, `data/skills.md`, etc.) - Work history, skills, certifications. The same information that appears on a CV, but in richer detail.
+4. **Generated output** (`output/`) - Tailored CVs and reports. Contains personal data but is designed for sharing with specific recipients.
 
 ## What Claude sees during a session
 
@@ -66,7 +65,6 @@ Key points:
   - **API key:** Anthropic retains inputs/outputs for up to 30 days for safety, does not train on them
   - **Pro/Max subscription:** Conversations may be stored per Anthropic's consumer terms, and retention policies differ from the API
 - Review [Anthropic's privacy policy](https://www.anthropic.com/privacy) for current details on your plan type
-- Session transcripts saved in `coaching/session-history/` are local files only
 
 ## Forking and cloning safely
 

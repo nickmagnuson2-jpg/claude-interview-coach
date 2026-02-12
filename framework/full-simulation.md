@@ -103,19 +103,18 @@ Three concrete, actionable changes for the next simulation. Not generic advice �
 
 When the debrief is delivered:
 
-1. **Save transcript** — save the full simulation transcript to `coaching/session-history/YYYY-MM-DD-[FULL-SIM]-role-slug.md`
-2. **Create a session file** — copy the relevant template (`framework/templates/recruiter-session.md` or `framework/templates/interview-session.md`) to `coaching/progress-recruiter/YYYY-MM-DD-[FULL-SIM]-role-slug.md` or `coaching/progress-interview/YYYY-MM-DD-[FULL-SIM]-role-slug.md`. Fill in all standard sections, then append the full debrief as an additional "## Full Simulation Debrief" section.
-3. **Update the summary** — in the relevant `_summary.md` (if it doesn't exist yet, copy the matching summary template from `framework/templates/` first):
+1. **Create a session file** — copy the relevant template (`framework/templates/recruiter-session.md` or `framework/templates/interview-session.md`) to `coaching/progress-recruiter/YYYY-MM-DD-HHMM-[FULL-SIM]-role-slug.md` or `coaching/progress-interview/YYYY-MM-DD-HHMM-[FULL-SIM]-role-slug.md`. Fill in all standard sections, then append the full debrief as an additional "## Full Simulation Debrief" section.
+2. **Update the summary** — in the relevant `_summary.md` (if it doesn't exist yet, copy the matching summary template from `framework/templates/` first):
    - Add a row to the Session Index with `[FULL-SIM]` tag
    - Increment anti-pattern counts from the Anti-Pattern-Log, update "Last Seen" date, set Trend
    - Recalculate Overall Status
-4. **Update anti-pattern tracker** — in `coaching/anti-pattern-tracker.md`:
+3. **Update anti-pattern tracker** — in `coaching/anti-pattern-tracker.md`:
    - Update status, last-seen, and trend for any pattern triggered or notably absent
    - Move patterns between status categories if warranted
    - Add new patterns if discovered during the simulation
    - Add a line to the Update Log
-5. **Ask the candidate** if any strong phrasings should be saved to `coaching/coached-answers.md`
-6. **Data enrichment** — check if the simulation surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
+4. **Ask the candidate** if any strong phrasings should be saved to `coaching/coached-answers.md`
+5. **Data enrichment** — check if the simulation surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
 
 ## See Also
 
