@@ -1,13 +1,13 @@
 # Personal data — ignored by default to prevent accidental exposure.
 # If you use a private repo and want to version your data, remove these lines.
-data/
-coaching/
+/data/
+/coaching/
 
 # Generated output (regenerable from data)
-output/
+/output/
 
 # PDF input files
-files/
+/files/
 
 # Python
 __pycache__/

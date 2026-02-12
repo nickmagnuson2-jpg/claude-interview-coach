@@ -30,4 +30,4 @@ rm -f data/profile.md data/skills.md data/certifications.md data/education.md da
 rm -rf output/*
 ```
 
-Then import your own CV: `/import-cv path/to/your-cv.pdf`
+Then run `/import-cv path/to/your-cv.pdf` — one command turns your CV into the same structured data files.

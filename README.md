@@ -74,7 +74,7 @@ cd resume-coach
 
 ### 1b. Try it first (optional)
 
-The repo includes fictional example data so you can try features before importing your own:
+The repo includes a fictional example profile — **Alex Chen**, a freelance DevOps/Cloud consultant in Berlin with 8 years across AWS and Azure, CKA certified, looking to move into a permanent platform engineering role. You can try all features with this data before importing your own:
 
 ```bash
 cp -r examples/data/* data/
@@ -85,7 +85,7 @@ Then open Claude Code in the repo and try:
 - `/review-cv output/sample-cv-cloud-engineer.md` — review the sample CV
 - `I want to practice a recruiter screening for a Senior Cloud Engineer role` — try coaching
 
-When you're ready to use your own data, delete the examples and continue with step 2.
+When you're ready to use your own data, delete the examples and run `/import-cv path/to/your-cv.pdf` — one command turns your CV into the same structured data files.
 
 ### 2. Import your data
 
