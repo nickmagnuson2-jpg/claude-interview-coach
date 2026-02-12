@@ -68,8 +68,8 @@ All examples below are from a tough-mode recruiter screening with the fictional 
 ### 1. Clone
 
 ```bash
-git clone <this-repo>
-cd resume-coach
+git clone https://github.com/raphaotten/claude-resume-coach.git
+cd claude-resume-coach
 ```
 
 ### 1b. Try it first (optional)
