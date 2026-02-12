@@ -14,7 +14,7 @@ The `.gitignore` excludes all personal data directories by default:
 | `output/` | Generated CVs, cheat sheets, review reports | Yes |
 | `files/` | PDF input files (CVs you import) | Yes |
 
-Everything in `framework/`, `docs/`, `tools/`, `.claude/skills/`, `examples/`, and `CLAUDE.md` is safe to commit. These contain methodology and automation only, no personal data.
+Everything in `framework/`, `plugins/`, `docs/`, `tools/`, `.claude/skills/`, `examples/`, and `CLAUDE.md` is safe to commit. These contain methodology and automation only, no personal data.
 
 ## What stays local vs. what's shared
 
@@ -23,8 +23,9 @@ Safe to push (methodology)          Private (your data)
 ─────────────────────────           ───────────────────
 CLAUDE.md                           data/*
 framework/**                        coaching/**
-.claude/skills/**                   output/**
-docs/**                             files/**
+plugins/**                          output/**
+.claude/skills/**                   files/**
+docs/**
 tools/**
 examples/**
 ```

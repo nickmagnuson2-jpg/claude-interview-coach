@@ -35,13 +35,14 @@ Load the following data files to inform the session:
 - `data/companies.md` — own business entities (only if the file exists and is non-empty; relevant for entrepreneurial or freelance backgrounds)
 - Match relevant projects from `data/projects/` to the target role
 - `framework/answering-strategies/` — answering strategy frameworks (direct answer structure, blank mind protocol, gap reframing, etc.). Use these as evaluation lenses when coaching — name the specific strategy in feedback when the candidate applies one well or misses one.
+- **Plugins:** If active plugins were loaded in `framework/interview-workflow.md` step 3, include their questions in the question pool and their anti-patterns in session tracking. Plugin-provided answering strategies are additional evaluation lenses alongside the core strategies.
 
 **Do NOT load cheat sheets** (`output/*-cheatsheet.md`) before or during the session. The cheat sheet is the candidate's call preparation — the coach must not see it until after the session ends. If the coach has the cheat sheet loaded, the candidate's answers will match the cheat sheet and look correct — so flaws in the cheat sheet (over-claims, weak framing, volunteered negatives) pass undetected. The coach must evaluate answers against the raw project data and coaching frameworks, not against pre-written scripts.
 
 ## How to Start
 
 1. Ask me what role I'm applying for (I'll describe a job ad or role type).
-2. Ask: **"Normal or tough round?"**
+2. Ask: **"Normal or tough round?"** — unless an active plugin's Session Behavior already defines the overall interviewer tone and pressure level (e.g. a stress-test or mean-mode plugin). In that case, skip this choice and use the plugin's behavior instead.
    - **Normal:** Standard hiring manager interview with coaching after each answer.
    - **Tough:** The hiring manager has read the CV closely and asks pointed questions. See Tough Mode below.
 3. Begin the mock interview as the hiring manager. After each of my answers, break character and coach me before continuing.

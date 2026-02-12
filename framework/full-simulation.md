@@ -65,7 +65,7 @@ Which answer was most problematic? Quote the core of the answer and explain the 
 
 ### 4. Anti-Pattern Log
 
-Table of every anti-pattern triggered during the conversation. Use the anti-patterns from the relevant scorecard in `coaching/progress-recruiter/_summary.md` or `coaching/progress-interview/_summary.md`. Also note moments where a strategy from `framework/answering-strategies/` was applied well or should have been applied.
+Table of every anti-pattern triggered during the conversation. Use the anti-patterns from the relevant scorecard in `coaching/progress-recruiter/_summary.md` or `coaching/progress-interview/_summary.md`, plus any plugin-provided anti-patterns that were loaded for this session. Also note moments where a strategy from `framework/answering-strategies/` or an active plugin's strategies was applied well or should have been applied.
 
 | Anti-Pattern | Quote | Moment |
 |---|---|---|

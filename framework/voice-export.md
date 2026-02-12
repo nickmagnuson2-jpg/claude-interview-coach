@@ -2,7 +2,9 @@
 
 ## Purpose
 
-The Claude App (voice mode) has no file access. To practise recruiter screenings by voice, the candidate needs a single self-contained prompt that sets up a **realistic full simulation** — no coaching, no interruptions, just a realistic recruiter call.
+The Claude App (voice mode) has no file access. To practise recruiter screenings by voice, the candidate needs a single self-contained prompt that sets up a **realistic full simulation** -- no coaching, no interruptions, just a realistic recruiter call.
+
+**Voice export is recruiter/HR screening only.** It simulates the first-stage phone screen, not a hiring manager technical interview. Plugins that activate only for mock interviews or full simulations do not apply here.
 
 Coaching and debrief happen **afterwards in Claude Code**, where all context files (coached answers, anti-patterns, progress tracking) are available.
 
@@ -63,6 +65,8 @@ Role assignment for Claude:
 >
 > **All example phrasings above are in English. When generating the prompt, translate them to match the CV language.**
 
+**Plugin Session Behavior:** Check `data/plugins.md` for activation config (if the file is missing, all plugins are active). Scan `plugins/*/plugin.md` for enabled plugins whose scope includes `coaching` and whose activation criteria match the target role/industry. If any active plugin has a `## Session Behavior` section with **Interviewer** instructions, incorporate them into the System Instruction above — they override the default Tone section (e.g. a mean-mode plugin replaces "Not hostile or mean" with its own tone). If no plugin provides Session Behavior, use the defaults as written. If `plugins/` is empty or missing, skip this check.
+
 ### 2. Recruiter Persona
 
 Extracted from the job ad, enriched by cheat sheet header (if available):
@@ -104,6 +108,10 @@ Always included:
 - Motivation for this specific role
 - Current employment or engagement status
 - Invoicing entity / contracting setup (for freelance/contract roles only, if relevant)
+
+#### D. Plugin Questions
+
+Check `data/plugins.md` for activation config (if the file is missing, all plugins are active). Scan `plugins/*/plugin.md` for enabled plugins whose scope includes `coaching` and whose activation criteria match the target role/industry. If any active plugin provides interview questions, include them here as the lowest-priority tier (below Standard Recruiter Topics). If `plugins/` is empty or missing, skip this source.
 
 ### 5. Call Flow Guidelines
 

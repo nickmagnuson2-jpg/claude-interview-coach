@@ -34,6 +34,7 @@ Load the following data files to inform the session:
 - `coaching/coached-answers.md` — use the **15-Second Pitch (Recruiter)** as the baseline pitch
 - Match relevant projects from `data/projects/` to the target role
 - `framework/answering-strategies/` — answering strategy frameworks (gap reframing, pin-down defense, direct answer structure, etc.). Use these as evaluation lenses when coaching — name the specific strategy in feedback when the candidate applies one well or misses one.
+- **Plugins:** If active plugins were loaded in `framework/interview-workflow.md` step 3, include their questions in the question pool and their anti-patterns in session tracking. Plugin-provided answering strategies are additional evaluation lenses alongside the core strategies.
 
 **Do NOT load cheat sheets** (`output/*-cheatsheet.md`) before or during the session. The cheat sheet is the candidate's call preparation — the coach must not see it until after the session ends. If the coach has the cheat sheet loaded, the candidate's answers will match the cheat sheet and look correct — so flaws in the cheat sheet (over-claims, weak framing, volunteered negatives) pass undetected. The coach must evaluate answers against the raw project data and coaching frameworks, not against pre-written scripts.
 
@@ -71,7 +72,7 @@ The recruiter is a gatekeeper, not my buyer. Their job is to check boxes and for
 ## How to Start
 
 1. Ask me what role I'm applying for (I'll paste a job ad or describe a role).
-2. Ask: **"Normal or tough round?"**
+2. Ask: **"Normal or tough round?"** — unless an active plugin's Session Behavior already defines the overall interviewer tone and pressure level (e.g. a stress-test or mean-mode plugin). In that case, skip this choice and use the plugin's behavior instead.
    - **Normal:** Standard recruiter screening with coaching after each answer.
    - **Tough:** The recruiter has read the CV carefully and probes weak points. See Tough Mode below.
 3. Begin the recruiter screening call. After each of my answers, break character and coach me. Focus specifically on recruiter-stage mistakes: volunteering negatives, going too generic, over-explaining, failing to give them something memorable.

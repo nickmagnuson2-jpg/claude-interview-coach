@@ -99,7 +99,7 @@ This creates your profile, skills, certifications, education, and projects as st
 - **Discover your professional identity** with `/extract-identity` (improves tone and narrative quality)
 - **Generate a CV:** paste a job ad and ask for a targeted CV
 - **Practice interviews:** ask for interview practice for a role, choose normal or tough mode
-- **Voice simulation:** run `/voice-export` to get a prompt for the Claude mobile app, practise by speaking, then `/debrief` the transcript
+- **Voice simulation:** run `/voice-export` to get a recruiter screening prompt for the Claude mobile app, practise by speaking, then `/debrief` the transcript
 
 ## Available commands
 
@@ -109,7 +109,7 @@ This creates your profile, skills, certifications, education, and projects as st
 | `/extract-identity` | Guided conversation to discover your professional identity |
 | `/review-cv` | Fast quality-gate review of a generated CV |
 | `/review-cv-deep` | Six-perspective deep-dive CV review |
-| `/voice-export <cv> <url>` | Generate voice simulation prompt |
+| `/voice-export <cv> <url>` | Generate recruiter screening simulation prompt for voice mode |
 | `/debrief <cv>` | Analyse a voice simulation transcript |
 | `/scan-jobs <portal> [query]` | Scan a job portal for matching projects (upwork.com, etc.) |
 

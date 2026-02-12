@@ -9,13 +9,14 @@ When asked to practice for an interview or prepare for a role:
    - **Recruiter screening** → load `framework/recruiter-screening.md`, adopt recruiter persona
    - **Mock interview** → load `framework/mock-interview.md`, adopt hiring manager persona
    - **Full simulation** → load `framework/full-simulation.md`, adopt chosen persona, run complete conversation without coaching breaks
-5. **Run the session** — ask questions one at a time, wait for answers, coach after each response
-6. **Reference actual data** — when giving "stronger versions" of answers, pull from the real project files and summary variants, not generic advice
-7. **Deliver Takeaway** — when the session wraps up, deliver a 3-4 sentence executive summary to the candidate in chat before saving anything: what happened, dominant patterns, what went well, and the single most important thing to fix
-8. **Save transcript** — save the full session transcript (IC + OOC) to `coaching/session-history/YYYY-MM-DD-role-slug.md`
-9. **Log progress** — after the session, create a session file in the relevant progress folder (`coaching/progress-recruiter/` or `coaching/progress-interview/`) and update its `_summary.md` with anti-pattern counts and coaching takeaways
-10. **Update anti-pattern tracker** — update `coaching/anti-pattern-tracker.md` with pattern status changes, new patterns, and an Update Log entry
-11. **Data enrichment** — check if the session surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
+5. **Load plugins** — check `data/plugins.md` for activation config (if the file is missing, all plugins are active). Scan `plugins/*/plugin.md` for enabled plugins whose scope includes `coaching` and whose activation criteria match the current role, industry, and session type. If found, load their questions, anti-patterns, answering strategies, and session behavior modifiers alongside core content. Content (questions, anti-patterns, strategies) is additive. Session behavior modifiers can override default persona tone and coaching style. If `plugins/` is empty or missing, skip this step.
+6. **Run the session** — ask questions one at a time, wait for answers, coach after each response
+7. **Reference actual data** — when giving "stronger versions" of answers, pull from the real project files and summary variants, not generic advice
+8. **Deliver Takeaway** — when the session wraps up, deliver a 3-4 sentence executive summary to the candidate in chat before saving anything: what happened, dominant patterns, what went well, and the single most important thing to fix
+9. **Save transcript** — save the full session transcript (IC + OOC) to `coaching/session-history/YYYY-MM-DD-role-slug.md`
+10. **Log progress** — after the session, create a session file in the relevant progress folder (`coaching/progress-recruiter/` or `coaching/progress-interview/`) and update its `_summary.md` with anti-pattern counts and coaching takeaways
+11. **Update anti-pattern tracker** — update `coaching/anti-pattern-tracker.md` with pattern status changes, new patterns, and an Update Log entry
+12. **Data enrichment** — check if the session surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
 
 ## Coaching Rules
 

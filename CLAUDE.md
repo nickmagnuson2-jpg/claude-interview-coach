@@ -65,12 +65,15 @@ Owner details live in `data/profile.md` (gitignored — prevents personal data l
 │   ├── skills.md              # Complete skill inventory with experience levels
 │   ├── education.md           # Degrees, training, qualifications
 │   ├── companies.md           # Own companies (if applicable)
+│   ├── plugins.md             # Plugin activation config (blocklist/allowlist)
 │   ├── project-background/    # Sensitive project background (NEVER use in CVs/resumes)
 │   └── projects/
 │       └── *.md                 # One file per project/engagement
+├── plugins/                     # Drop-in extensions (interview coaching, CV generation)
 ├── examples/                    # Fictional example data (try features before importing your own)
 │   ├── data/                    #   Complete fictional freelancer profile
-│   └── output/                  #   Sample generated CV
+│   ├── output/                  #   Sample generated CV
+│   └── plugins/                 #   Example plugin (copy to plugins/ to activate)
 ├── .claude/
 │   └── skills/                  # Skill definitions powering slash commands (/import-cv, /voice-export, etc.)
 ├── docs/
