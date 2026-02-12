@@ -184,6 +184,8 @@ After the user confirms the assessment:
    - Add new patterns if discovered during the simulation
    - Add a line to the Update Log
 
+6. **Data enrichment** — check if the simulation surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
+
 ### Session File Naming
 
 If a session file for this date and role already exists (from a text-based coaching session), append a suffix:

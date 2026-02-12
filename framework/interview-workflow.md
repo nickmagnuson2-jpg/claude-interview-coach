@@ -15,6 +15,7 @@ When asked to practice for an interview or prepare for a role:
 8. **Save transcript** — save the full session transcript (IC + OOC) to `coaching/session-history/YYYY-MM-DD-role-slug.md`
 9. **Log progress** — after the session, create a session file in the relevant progress folder (`coaching/progress-recruiter/` or `coaching/progress-interview/`) and update its `_summary.md` with anti-pattern counts and coaching takeaways
 10. **Update anti-pattern tracker** — update `coaching/anti-pattern-tracker.md` with pattern status changes, new patterns, and an Update Log entry
+11. **Data enrichment** — check if the session surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
 
 ## Coaching Rules
 

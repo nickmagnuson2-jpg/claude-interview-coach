@@ -111,6 +111,7 @@ When the session wraps up (or the candidate says they're done):
    - Move patterns between status categories if warranted (e.g., persistent → resolved after multiple clean sessions)
    - Add new patterns if discovered during the session
    - Add a line to the Update Log
+8. **Data enrichment** — check if the session surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
 
 ## See Also
 

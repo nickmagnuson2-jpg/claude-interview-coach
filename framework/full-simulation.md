@@ -115,6 +115,7 @@ When the debrief is delivered:
    - Add new patterns if discovered during the simulation
    - Add a line to the Update Log
 5. **Ask the candidate** if any strong phrasings should be saved to `coaching/coached-answers.md`
+6. **Data enrichment** — check if the simulation surfaced new information (project details, achievements, technologies, skills) that should be captured in the data files. Follow the procedure in `framework/data-enrichment.md`.
 
 ## See Also
 

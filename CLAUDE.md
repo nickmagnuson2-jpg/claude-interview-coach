@@ -32,6 +32,7 @@ Owner details live in `data/profile.md` (gitignored — prevents personal data l
 │   ├── mock-interview.md        # Hiring manager mock interview coaching methodology
 │   ├── full-simulation.md       # Full simulation mode (uninterrupted conversation + debrief)
 │   ├── voice-export.md          # Voice mode export — recruiter simulation prompt for Claude App
+│   ├── data-enrichment.md       # Post-session data file enrichment (auto-capture new info from sessions)
 │   ├── answering-strategies/     # In-call answering strategies (quick-reference for interviews)
 │   │   ├── behavioral-questions-without-prepared-example.md  # Blank Mind Protocol for STAR questions
 │   │   ├── gap-reframing.md                                  # Handling missing skills/experience
