@@ -1,13 +1,13 @@
 # AI Interview Coach
 
-Turn [Claude Code](https://docs.anthropic.com/en/docs/claude-code) into a complete interview preparation toolkit. Practice interviews with AI coaching, voice simulations, progress tracking, and targeted CV generation. No code, just markdown.
+Turn [Claude Code](https://docs.anthropic.com/en/docs/claude-code) into a complete interview preparation toolkit. Practice job interviews with AI coaching, mock interview simulations, recruiter screening practice, and progress tracking. Plus targeted CV generation. No code, just markdown.
 
 For freelancers and job seekers who use Claude Code.
 
 ## What it does
 
-- **Practice job interviews** with real-time coaching that catches your mistakes after every answer (or full uninterrupted simulations with debrief)
-- **Simulate real calls** via voice through the Claude mobile app, then debrief the transcript
+- **Practice job interviews** with real-time AI coaching that catches your mistakes after every answer (or full uninterrupted interview simulations with debrief)
+- **Recruiter screening practice** via voice simulation through the Claude mobile app, then debrief the transcript
 - **Track improvement** with anti-pattern counts, structured scorecards, and session logs
 - **Generate tailored CVs** from a single experience database: one job ad in, one role-specific CV out
 - **Scan job boards** for matching roles with fit scoring
@@ -83,7 +83,7 @@ cp -r examples/output/* output/
 Then open Claude Code in the repo and try:
 - `/review-cv output/sample-cv-cloud-engineer.md` to review the sample CV
 - `/review-cv-deep output/sample-cv-cloud-engineer.md` for a six-perspective deep review (recruiter, hiring manager, competitor, skeptic, copy editor, source data auditor)
-- `I want to practice an interview for a Senior Cloud Engineer role` to try coaching
+- `I want to practice an interview for a Senior Cloud Engineer role` to try mock interview practice
 
 ### 2. Import your own data
 
@@ -98,8 +98,8 @@ This creates your profile, skills, certifications, education, and projects as st
 - **Enrich your data** over time: coaching sessions surface missing details automatically, or browse your `data/projects/` files and fill in key achievements manually
 - **Discover your professional identity** with `/extract-identity` (improves tone and narrative quality)
 - **Generate a CV:** paste a job ad and ask for a targeted CV
-- **Practice interviews:** ask for interview practice for a role, choose normal or tough mode
-- **Voice simulation:** run `/voice-export` to get a recruiter screening prompt for the Claude mobile app, practise by speaking, then `/debrief` the transcript
+- **Practice interviews:** ask for mock interview practice or recruiter screening practice for a role, choose normal or tough mode
+- **Voice simulation:** run `/voice-export` to get an interview simulation prompt for the Claude mobile app, practice by speaking, then `/debrief` the transcript
 
 ## Available commands
 
