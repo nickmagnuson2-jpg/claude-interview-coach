@@ -17,50 +17,6 @@ Then try any of the features below.
 
 ## Example Invocations
 
-### Resume / CV Generation
-
-**From a job ad URL:**
-
-```
-Generate a CV targeting this role: https://example.com/jobs/senior-devops-engineer
-```
-
-**From a pasted job description:**
-
-```
-Generate a CV for this role:
-
-Senior Cloud Engineer - FinServ Corp
-Requirements: 5+ years AWS, Kubernetes, Terraform, CI/CD pipelines.
-Strong experience with microservices architecture and observability.
-```
-
-**With a fictional job profile (no job ad needed):**
-
-```
-Generate a CV targeting a Senior Platform Engineer role at a mid-size SaaS company.
-Focus on Kubernetes, GitOps, and developer experience. Remote, contract, 6 months.
-```
-
-```
-Create a resume for a Lead DevOps Architect position. Come up with a realistic
-job profile for a large German automotive company moving to cloud-native.
-```
-
-### CV Review
-
-**Quick review:**
-
-```
-/review-cv output/sample-cv-cloud-engineer.md
-```
-
-**Multi-perspective deep review:**
-
-```
-/review-cv-deep output/sample-cv-cloud-engineer.md
-```
-
 ### Interview Coaching
 
 **Recruiter screening with a specific job ad:**

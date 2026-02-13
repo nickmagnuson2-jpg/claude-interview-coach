@@ -1,15 +1,15 @@
-# Resume Coach — Methodology
+# AI Interview Coach — Methodology
 
-An open-source framework that turns Claude Code into a complete career toolkit: structured experience management, targeted CV generation, interview coaching with progress tracking, and voice simulation for realistic practice.
+An open-source framework that turns Claude Code into a complete interview preparation and career toolkit: realistic interview coaching with progress tracking, voice simulation, structured experience management, and targeted CV generation.
 
 ## Table of Contents
 
-- [Structured Experience Management](#structured-experience-management)
-- [Targeted Resume Generation](#targeted-resume-generation)
 - [Interview Coaching](#interview-coaching)
 - [Answering Strategies](#answering-strategies)
 - [Voice Simulation Pipeline](#voice-simulation-pipeline)
 - [Progress Tracking](#progress-tracking)
+- [Targeted Resume Generation](#targeted-resume-generation)
+- [Structured Experience Management](#structured-experience-management)
 - [Architecture](#architecture)
 
 ---

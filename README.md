@@ -1,15 +1,15 @@
-# Resume Coach
+# AI Interview Coach
 
-Turn [Claude Code](https://docs.anthropic.com/en/docs/claude-code) into a job hunting toolkit. Tailored CVs, interview coaching, voice simulations, progress tracking. No code, just markdown.
+Turn [Claude Code](https://docs.anthropic.com/en/docs/claude-code) into a complete interview preparation toolkit. Practice interviews with AI coaching, voice simulations, progress tracking, and targeted CV generation. No code, just markdown.
 
 For freelancers and job seekers who use Claude Code.
 
 ## What it does
 
 - **Practice job interviews** with real-time coaching that catches your mistakes after every answer (or full uninterrupted simulations with debrief)
-- **Generate tailored CVs** from a single experience database: one job ad in, one role-specific CV out
 - **Simulate real calls** via voice through the Claude mobile app, then debrief the transcript
 - **Track improvement** with anti-pattern counts, structured scorecards, and session logs
+- **Generate tailored CVs** from a single experience database: one job ad in, one role-specific CV out
 - **Scan job boards** for matching roles with fit scoring
 
 ## What coaching looks like
@@ -69,8 +69,8 @@ All examples below are from a tough-mode interview with the fictional example pr
 ### 1. Clone and try the demo
 
 ```bash
-git clone https://github.com/raphaotten/claude-resume-coach.git
-cd claude-resume-coach
+git clone https://github.com/raphaotten/claude-interview-coach.git
+cd claude-interview-coach
 ```
 
 The repo includes a fictional profile so you can try all features without importing your own data:

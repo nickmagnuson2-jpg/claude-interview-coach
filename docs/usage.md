@@ -37,42 +37,6 @@ See [examples/README.md](../examples/README.md) for example invocations.
 
 ---
 
-## Generating a CV
-
-Provide a job description and ask for a targeted resume. Three ways to specify the role:
-
-**From a job ad URL:**
-```
-Generate a CV targeting this role: https://example.com/jobs/senior-devops-engineer
-```
-
-**From a pasted job description:**
-```
-Generate a CV for this role:
-
-Senior Cloud Engineer - FinServ Corp
-Requirements: 5+ years AWS, Kubernetes, Terraform, CI/CD pipelines.
-```
-
-**From a fictional job profile:**
-```
-Generate a CV targeting a Senior Platform Engineer role at a mid-size SaaS company.
-Focus on Kubernetes, GitOps, and developer experience. Remote, contract, 6 months.
-```
-
-The framework matches your experience against the role requirements, selects the most relevant projects, tailors the summary, and outputs a clean markdown CV in `output/`.
-
-### Reviewing a CV
-
-Two review skills catch problems before the CV goes out:
-
-- **`/review-cv <filename>`** -- fast quality gate: structural checks, keyword matching, claim audits, self-sabotage detection. Pass/fail in 30 seconds.
-- **`/review-cv-deep <filename> <job-ad-url>`** -- six parallel reviewers (recruiter, hiring manager, competitor analyst, skeptic, copy editor, source data auditor) each assess the CV. Produces severity-rated issues, suggested rewrites, and top 10 probing interview questions.
-
-The filename is just the name (e.g. `20260210-cloud-engineer.md`), read from the `output/` folder.
-
----
-
 ## Interview Coaching
 
 Provide a job description and ask for a coaching session. You can use a real job ad, paste a description, or ask the model to invent a fictional role.
@@ -139,6 +103,42 @@ For spoken practice using the Claude App (voice mode):
    /debrief output/20260210-cloud-engineer.md
    ```
    Paste the transcript from the voice session. The debrief analyzes your answers against coached versions, identifies anti-patterns, and logs the session.
+
+---
+
+## Generating a CV
+
+Provide a job description and ask for a targeted resume. Three ways to specify the role:
+
+**From a job ad URL:**
+```
+Generate a CV targeting this role: https://example.com/jobs/senior-devops-engineer
+```
+
+**From a pasted job description:**
+```
+Generate a CV for this role:
+
+Senior Cloud Engineer - FinServ Corp
+Requirements: 5+ years AWS, Kubernetes, Terraform, CI/CD pipelines.
+```
+
+**From a fictional job profile:**
+```
+Generate a CV targeting a Senior Platform Engineer role at a mid-size SaaS company.
+Focus on Kubernetes, GitOps, and developer experience. Remote, contract, 6 months.
+```
+
+The framework matches your experience against the role requirements, selects the most relevant projects, tailors the summary, and outputs a clean markdown CV in `output/`.
+
+### Reviewing a CV
+
+Two review skills catch problems before the CV goes out:
+
+- **`/review-cv <filename>`** -- fast quality gate: structural checks, keyword matching, claim audits, self-sabotage detection. Pass/fail in 30 seconds.
+- **`/review-cv-deep <filename> <job-ad-url>`** -- six parallel reviewers (recruiter, hiring manager, competitor analyst, skeptic, copy editor, source data auditor) each assess the CV. Produces severity-rated issues, suggested rewrites, and top 10 probing interview questions.
+
+The filename is just the name (e.g. `20260210-cloud-engineer.md`), read from the `output/` folder.
 
 ---
 

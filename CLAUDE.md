@@ -2,16 +2,16 @@
      Personal details live in data/profile.md (gitignored).
      Everything else works as-is. -->
 
-# Resume Coach
+# AI Interview Coach
 
 ## Purpose
 
 This repository is your **single source of truth** for professional experience, education, certifications, and skills. It serves four goals:
 
-1. **Structured record-keeping** — all experience data lives here in markdown, versioned with git
-2. **Targeted resume generation** — produce ad-hoc resumes tailored to specific roles or opportunities
-3. **Interview preparation** — practice recruiter screenings and hiring manager interviews with AI coaching
-4. **Professional self-awareness** — coaching-derived insights on identity, values, strengths, and narrative patterns that inform how everything above gets written
+1. **Interview preparation** — practice recruiter screenings and hiring manager interviews with AI coaching
+2. **Professional self-awareness** — coaching-derived insights on identity, values, strengths, and narrative patterns that inform how you present yourself
+3. **Targeted CV generation** — produce tailored CVs for specific roles or opportunities
+4. **Structured record-keeping** — all experience data lives here in markdown, versioned with git
 
 ## Owner Profile
 
